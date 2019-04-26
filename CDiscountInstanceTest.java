@@ -13,7 +13,7 @@ class CDiscountInstanceTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		CDiscountInstance CdisInsTest = new CDiscountInstance(CDiscTest, CProdInsTest, 0, "Test");
+		CDiscountInstance CdisInsTest = new CDiscountInstance(CDiscTest, CProdInsTest, 15, "Test");
 		
 	}
 
@@ -34,7 +34,8 @@ class CDiscountInstanceTest {
 	
 	void ammountTest() {
 		assertNotNull(CdisInsTest.amount());
-		assertEquals(0, CdisInsTest.amount());
+		assertEquals(15, CdisInsTest.amount());
+		assertEquals(float.class, CdisInsTest.amount());
 	}
 	void nameTest() {
 		assertNotNull(CdisInsTest.name());
